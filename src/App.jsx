@@ -1,10 +1,9 @@
-const Hello = () => {
+const Hello = (props) => {
   return (
     <section>
-      <hr></hr>
-      <h1>Greetings</h1>
-
-      <p>Hello world</p>
+      <p>
+        Hello {props.name}, you are {props.age} years old.
+      </p>
     </section>
   );
 };
@@ -28,12 +27,17 @@ const Time = () => {
 };
 
 const App = () => {
+  const nimi = "Pekka";
+  const ika = 10;
   return (
     <>
+      <h1>Päivämäärä</h1>
       <Time />
-      <Hello />
-      <Hello />
-      <Hello />
+      <hr></hr>
+      <h1>Greetings</h1>
+
+      <Hello name="Maija" age={26 + 10} />
+      <Hello name={nimi} age={ika} />
     </>
   );
 };
