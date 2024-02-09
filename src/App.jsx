@@ -25,6 +25,14 @@ const Time = () => {
     </section>
   );
 };
+const Footer = () => {
+  return (
+    <footer>
+      <hr></hr>
+      <p>2024 &copy; Juha Konttinen</p>
+    </footer>
+  );
+};
 
 const App = () => {
   const nimi = "Pekka";
@@ -38,6 +46,8 @@ const App = () => {
 
       <Hello name="Maija" age={26 + 10} />
       <Hello name={nimi} age={ika} />
+
+      <Footer />
     </>
   );
 };
